@@ -1,0 +1,14 @@
+.skills {
+    &__title {
+        @include sectionTitle;
+        margin-bottom: 4rem;
+
+    }
+
+    &__content {}
+
+
+    &__subtitle {
+        @include sectionSkills;
+    }
+}

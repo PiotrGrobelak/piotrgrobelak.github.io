@@ -334,11 +334,12 @@ template {
     line-height: 1.6rem; }
   .hero__link {
     font-weight: 500;
-    color: #0593FB; }
+    color: #0593FB;
+    cursor: pointer; }
   .hero__email {
     position: relative;
     margin: 0;
-    margin-bottom: 7.5rem;
+    margin-bottom: 7rem;
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.6rem;
@@ -351,6 +352,19 @@ template {
       height: 2px;
       width: 210px;
       background-color: #0593FB; }
+
+.skills__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2rem;
+  text-align: center;
+  margin-bottom: 4rem; }
+
+.skills__subtitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 2rem;
+  text-align: left; }
 
 html {
   -webkit-box-sizing: border-box;
