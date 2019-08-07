@@ -1,7 +1,7 @@
 .skills {
     &__title {
         @include sectionTitle;
-        margin-bottom: 5.4rem;
+        margin-bottom: 6rem;
         position: relative;
 
         &::after {
@@ -23,6 +23,29 @@
 
     &__subtitle {
         @include sectionSkills;
+        position: relative;
 
+        &::before {
+            content: "";
+            position: absolute;
+            top: -25%;
+            left: 0;
+            width: 40px;
+            height: 4px;
+            border-radius: 8px;
+            transform: matrix(1, 0, 0, -1, 0, 0);
+        }
+
+        &--green::before {
+            background-color: $green;
+        }
+
+        &--purpure::before {
+            background-color: $purpure;
+        }
+
+        &--darkerBlue::before {
+            background-color: $darkerBlue;
+        }
     }
 }
