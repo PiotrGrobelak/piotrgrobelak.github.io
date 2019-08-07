@@ -19,6 +19,7 @@ $bold: 600;
 
 
 @mixin sectionTitle {
+    margin: 0 auto;
     font-size: 1.5rem;
     font-weight: $bold;
     line-height: 2rem;
@@ -26,6 +27,7 @@ $bold: 600;
 }
 
 @mixin sectionSkills {
+    margin: 0 auto;
     font-size: 1.4rem;
     font-weight: $bold;
     line-height: 2rem;

@@ -1,7 +1,7 @@
 .skills {
     &__title {
         @include sectionTitle;
-        margin-bottom: 4rem;
+        margin-bottom: 5.4rem;
 
     }
 
@@ -10,5 +10,6 @@
 
     &__subtitle {
         @include sectionSkills;
+
     }
 }
