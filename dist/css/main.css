@@ -359,7 +359,21 @@ template {
   font-weight: 600;
   line-height: 2rem;
   text-align: center;
-  margin-bottom: 5.4rem; }
+  margin-bottom: 5.4rem;
+  position: relative; }
+  .skills__title::after {
+    content: "";
+    position: absolute;
+    bottom: -35%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    height: 2px;
+    width: 100%;
+    max-width: 343px;
+    background-color: #CBD2D9;
+    opacity: 0.3; }
 
 .skills__subtitle {
   margin: 0 auto;

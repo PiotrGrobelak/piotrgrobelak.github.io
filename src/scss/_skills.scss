@@ -2,7 +2,20 @@
     &__title {
         @include sectionTitle;
         margin-bottom: 5.4rem;
+        position: relative;
 
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -35%;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 2px;
+            width: 100%;
+            max-width: 343px;
+            background-color: $grey;
+            opacity: 0.3;
+        }
     }
 
     &__content {}
