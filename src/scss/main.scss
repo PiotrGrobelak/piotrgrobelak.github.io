@@ -1,5 +1,7 @@
 @import "_normalize";
 @import "_variables";
+@import "_hero.scss";
+
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap&subset=latin-ext');
 
 
@@ -17,4 +19,8 @@ html {
 
 body {
   background: $firstWhite;
+}
+
+.main {
+  margin: 0 1rem;
 }
