@@ -20,7 +20,6 @@ $medium: 500;
 $bold: 600;
 
 
-
 @mixin sectionTitle {
     margin: 0 auto;
     font-size: 1.5rem;
@@ -28,6 +27,12 @@ $bold: 600;
     line-height: 2rem;
     text-align: center;
     color: $black;
+}
+
+@mixin paragraph {
+    font-size: 0.875rem;
+    font-weight: $light;
+    line-height: 1.625rem;
 }
 
 @mixin sectionSkills {

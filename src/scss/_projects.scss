@@ -2,4 +2,13 @@
     margin-bottom: 5rem;
     background-color: $lightGrey;
     padding: 0 1rem;
+
+    &__title {
+        @include sectionTitle;
+        padding-top: 5rem;
+    }
+
+    &__description {
+        @include paragraph;
+    }
 }

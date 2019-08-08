@@ -330,9 +330,9 @@ template {
   .hero__paragraph {
     margin: 0;
     margin-bottom: 2.5rem;
-    font-size: 1rem;
+    font-size: 0.875rem;
     font-weight: 300;
-    line-height: 1.6rem; }
+    line-height: 1.625rem; }
   .hero__link {
     font-weight: 500;
     color: #0593FB;
@@ -435,6 +435,18 @@ template {
   margin-bottom: 5rem;
   background-color: #F5F7FA;
   padding: 0 1rem; }
+  .projects__title {
+    margin: 0 auto;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2rem;
+    text-align: center;
+    color: #171F3F;
+    padding-top: 5rem; }
+  .projects__description {
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.625rem; }
 
 html {
   -webkit-box-sizing: border-box;
