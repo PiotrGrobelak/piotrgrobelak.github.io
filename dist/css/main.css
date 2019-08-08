@@ -359,6 +359,7 @@ template {
   font-weight: 600;
   line-height: 2rem;
   text-align: center;
+  color: #171F3F;
   margin-bottom: 6rem;
   position: relative; }
   .skills__title::after {
@@ -375,17 +376,13 @@ template {
     background-color: #CBD2D9;
     opacity: 0.3; }
 
-.skills__list {
-  margin: 0 auto;
-  margin-bottom: 3.5rem;
-  list-style: none; }
-
 .skills__subtitle {
   margin: 0 auto;
   font-size: 1.4rem;
   font-weight: 600;
   line-height: 2rem;
   text-align: left;
+  color: #171F3F;
   margin-bottom: 0.5rem;
   position: relative; }
   .skills__subtitle::before {
@@ -405,6 +402,34 @@ template {
     background-color: #653CAD; }
   .skills__subtitle--darkerBlue::before {
     background-color: #2251CC; }
+
+.skills__list {
+  margin: 0 auto;
+  margin-bottom: 3.5rem;
+  list-style: none;
+  padding: 0;
+  margin-left: 8px; }
+
+.skills__item {
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 2rem;
+  color: #52606D;
+  position: relative;
+  padding-left: 0.85rem; }
+  .skills__item::before {
+    content: "";
+    position: absolute;
+    top: 25%;
+    left: -0.5rem;
+    height: 12px;
+    width: 12px; }
+  .skills__item--green::before {
+    background-image: url(../assets/img/icons/iconGreen.svg); }
+  .skills__item--purpure::before {
+    background-image: url(../assets/img/icons/iconPurpure.svg); }
+  .skills__item--blue::before {
+    background-image: url(../assets/img/icons/iconBlue.svg); }
 
 html {
   -webkit-box-sizing: border-box;

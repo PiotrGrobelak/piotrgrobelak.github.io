@@ -11,6 +11,7 @@ $grey: #CBD2D9;
 $darkGrey: #52606D;
 $purpure: #653CAD;
 $green: #06C847;
+$black: #171F3F;
 
 // Fonts weight
 $light: 300;
@@ -26,6 +27,7 @@ $bold: 600;
     font-weight: $bold;
     line-height: 2rem;
     text-align: center;
+    color: $black;
 }
 
 @mixin sectionSkills {
@@ -34,4 +36,6 @@ $bold: 600;
     font-weight: $bold;
     line-height: 2rem;
     text-align: left;
+    color: $black;
+
 }
