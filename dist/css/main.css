@@ -375,12 +375,18 @@ template {
     background-color: #CBD2D9;
     opacity: 0.3; }
 
+.skills__list {
+  margin: 0 auto;
+  margin-bottom: 3.5rem;
+  list-style: none; }
+
 .skills__subtitle {
   margin: 0 auto;
   font-size: 1.4rem;
   font-weight: 600;
   line-height: 2rem;
   text-align: left;
+  margin-bottom: 0.5rem;
   position: relative; }
   .skills__subtitle::before {
     content: "";

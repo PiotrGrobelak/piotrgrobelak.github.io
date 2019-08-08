@@ -1,51 +1,57 @@
 .skills {
-    &__title {
-        @include sectionTitle;
-        margin-bottom: 6rem;
-        position: relative;
+  &__title {
+    @include sectionTitle;
+    margin-bottom: 6rem;
+    position: relative;
 
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: -35%;
-            left: 50%;
-            transform: translateX(-50%);
-            height: 2px;
-            width: 100%;
-            max-width: 343px;
-            background-color: $grey;
-            opacity: 0.3;
-        }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -35%;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 2px;
+      width: 100%;
+      max-width: 343px;
+      background-color: $grey;
+      opacity: 0.3;
+    }
+  }
+
+  &__content {
+  }
+  &__list {
+    margin: 0 auto;
+    margin-bottom: 3.5rem;
+    list-style: none;
+  }
+
+  &__subtitle {
+    @include sectionSkills;
+    margin-bottom: 0.5rem;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -25%;
+      left: 0;
+      width: 40px;
+      height: 4px;
+      border-radius: 8px;
+      transform: matrix(1, 0, 0, -1, 0, 0);
     }
 
-    &__content {}
-
-
-    &__subtitle {
-        @include sectionSkills;
-        position: relative;
-
-        &::before {
-            content: "";
-            position: absolute;
-            top: -25%;
-            left: 0;
-            width: 40px;
-            height: 4px;
-            border-radius: 8px;
-            transform: matrix(1, 0, 0, -1, 0, 0);
-        }
-
-        &--green::before {
-            background-color: $green;
-        }
-
-        &--purpure::before {
-            background-color: $purpure;
-        }
-
-        &--darkerBlue::before {
-            background-color: $darkerBlue;
-        }
+    &--green::before {
+      background-color: $green;
     }
+
+    &--purpure::before {
+      background-color: $purpure;
+    }
+
+    &--darkerBlue::before {
+      background-color: $darkerBlue;
+    }
+  }
 }
