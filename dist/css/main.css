@@ -332,7 +332,8 @@ template {
     margin-bottom: 2.5rem;
     font-size: 0.875rem;
     font-weight: 300;
-    line-height: 1.625rem; }
+    line-height: 1.625rem;
+    color: #52606D; }
   .hero__link {
     font-weight: 500;
     color: #0593FB;
@@ -434,7 +435,7 @@ template {
 .projects {
   margin-bottom: 5rem;
   background-color: #F5F7FA;
-  padding: 0 1rem; }
+  padding: 0 1rem 5rem 1rem; }
   .projects__title {
     margin: 0 auto;
     font-size: 1.5rem;
@@ -443,10 +444,63 @@ template {
     text-align: center;
     color: #171F3F;
     padding-top: 5rem; }
+  .projects__paragraph {
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.625rem;
+    color: #52606D;
+    margin-top: 0.5rem;
+    text-align: center; }
+  .projects__cards {
+    margin-top: 2rem;
+    list-style: none;
+    padding: 0; }
+  .projects__card {
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.09);
+            box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.09);
+    border-radius: 4px;
+    margin-bottom: 1rem; }
+  .projects__wrapper {
+    padding: 2rem 1.625rem 0 2rem; }
+  .projects__logo {
+    width: 40px;
+    height: 40px; }
+  .projects__name {
+    margin: 1rem 0 0.25rem 0;
+    font-weight: 600;
+    line-height: 1.5rem; }
   .projects__description {
     font-size: 0.875rem;
     font-weight: 300;
-    line-height: 1.625rem; }
+    line-height: 1.625rem;
+    color: #52606D;
+    margin: 0;
+    margin-bottom: 2rem;
+    text-align: left; }
+  .projects__links {
+    background-color: #F5F7FA;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0.625rem 1rem 0.625rem 0; }
+  .projects__icon {
+    padding: 0 0.375rem 0 1rem; }
+  .projects__link {
+    padding-right: 1rem;
+    text-decoration: none;
+    color: #0593FB;
+    line-height: 28px; }
+    .projects__link--border {
+      border-right: solid 1px #CBD2D9; }
 
 html {
   -webkit-box-sizing: border-box;

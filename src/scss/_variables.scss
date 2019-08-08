@@ -1,5 +1,5 @@
 // Colors
-$firstWhite: #ffffff;
+$white: #ffffff;
 $midNight: #171F3F;
 $lighterBlue: #E6F5FF;
 $lightblue: #64BEFF;
@@ -33,6 +33,7 @@ $bold: 600;
     font-size: 0.875rem;
     font-weight: $light;
     line-height: 1.625rem;
+    color: $darkGrey;
 }
 
 @mixin sectionSkills {

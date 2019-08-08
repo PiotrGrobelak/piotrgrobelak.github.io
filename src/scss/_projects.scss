@@ -1,14 +1,81 @@
 .projects {
     margin-bottom: 5rem;
     background-color: $lightGrey;
-    padding: 0 1rem;
+    padding: 0 1rem 5rem 1rem;
 
     &__title {
         @include sectionTitle;
         padding-top: 5rem;
     }
 
+    &__paragraph {
+        @include paragraph;
+        margin-top: 0.5rem;
+        text-align: center;
+    }
+
+    &__cards {
+        margin-top: 2rem;
+        list-style: none;
+        padding: 0;
+    }
+
+    &__card {
+        background-color: $white;
+        box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.09);
+        border-radius: 4px;
+        margin-bottom: 1rem;
+    }
+
+    &__wrapper {
+        padding: 2rem 1.625rem 0 2rem;
+    }
+
+    &__logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    &__name {
+        margin: 1rem 0 0.25rem 0;
+        font-weight: $bold;
+        line-height: 1.5rem;
+    }
+
     &__description {
         @include paragraph;
+        margin: 0;
+        margin-bottom: 2rem;
+        text-align: left;
     }
+
+    &__links {
+        background-color: $lightGrey;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0.625rem 1rem 0.625rem 0;
+    }
+
+    &__icon {
+        padding: 0 0.375rem 0 1rem;
+        // margin-top: 4px;
+        // padding-left: 1rem;
+        // width: 20px;
+        // height: 20px;
+    }
+
+    &__link {
+        padding-right: 1rem;
+        text-decoration: none;
+        color: $blue;
+        line-height: 28px;
+
+        &--border {
+            border-right: solid 1px $grey;
+        }
+
+    }
+
 }
