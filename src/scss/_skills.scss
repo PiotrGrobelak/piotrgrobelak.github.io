@@ -1,4 +1,8 @@
 .skills {
+    margin-bottom: 5rem;
+    padding: 0 1rem;
+
+
     &__title {
         @include sectionTitle;
         margin-bottom: 6rem;
@@ -12,7 +16,6 @@
             transform: translateX(-50%);
             height: 2px;
             width: 100%;
-            max-width: 343px;
             background-color: $grey;
             opacity: 0.3;
         }
