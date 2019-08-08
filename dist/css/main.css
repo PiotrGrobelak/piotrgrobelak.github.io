@@ -433,9 +433,8 @@ template {
       background-image: url(../assets/img/icons/iconBlue.svg); }
 
 .projects {
-  margin-bottom: 5rem;
-  background-color: #F5F7FA;
-  padding: 0 1rem 5rem 1rem; }
+  padding: 0 1rem 5rem 1rem;
+  background-color: #F5F7FA; }
   .projects__title {
     margin: 0 auto;
     font-size: 1.5rem;
@@ -453,14 +452,14 @@ template {
     text-align: center; }
   .projects__cards {
     margin-top: 2rem;
-    list-style: none;
-    padding: 0; }
+    padding: 0;
+    list-style: none; }
   .projects__card {
+    margin-bottom: 1rem;
     background-color: #ffffff;
     -webkit-box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.09);
             box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.09);
-    border-radius: 4px;
-    margin-bottom: 1rem; }
+    border-radius: 4px; }
   .projects__wrapper {
     padding: 2rem 1.625rem 0 2rem; }
   .projects__logo {
@@ -479,6 +478,7 @@ template {
     margin-bottom: 2rem;
     text-align: left; }
   .projects__links {
+    padding: 0.625rem 1rem 0.625rem 0;
     background-color: #F5F7FA;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -490,8 +490,7 @@ template {
             justify-content: flex-end;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center;
-    padding: 0.625rem 1rem 0.625rem 0; }
+            align-items: center; }
   .projects__icon {
     padding: 0 0.375rem 0 1rem; }
   .projects__link {
@@ -501,6 +500,36 @@ template {
     line-height: 28px; }
     .projects__link--border {
       border-right: solid 1px #CBD2D9; }
+
+.footer {
+  background-color: #171F3F; }
+  .footer__content {
+    padding: 0 1rem; }
+  .footer__title {
+    margin: 0 auto;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2rem;
+    text-align: center;
+    color: #171F3F;
+    padding-top: 8.25rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    text-align: left; }
+  .footer__paragraph {
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.625rem;
+    color: #52606D;
+    margin: 0;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    color: #ffffff; }
+  .footer__wrapper {
+    margin-bottom: 2rem; }
+  .footer__email {
+    padding-bottom: 7.75rem;
+    color: #0593FB; }
 
 html {
   -webkit-box-sizing: border-box;

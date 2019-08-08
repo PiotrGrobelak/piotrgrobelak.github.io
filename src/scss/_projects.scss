@@ -1,7 +1,6 @@
 .projects {
-    margin-bottom: 5rem;
-    background-color: $lightGrey;
     padding: 0 1rem 5rem 1rem;
+    background-color: $lightGrey;
 
     &__title {
         @include sectionTitle;
@@ -16,15 +15,15 @@
 
     &__cards {
         margin-top: 2rem;
-        list-style: none;
         padding: 0;
+        list-style: none;
     }
 
     &__card {
+        margin-bottom: 1rem;
         background-color: $white;
         box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.09);
         border-radius: 4px;
-        margin-bottom: 1rem;
     }
 
     &__wrapper {
@@ -50,20 +49,16 @@
     }
 
     &__links {
+        padding: 0.625rem 1rem 0.625rem 0;
         background-color: $lightGrey;
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
         align-items: center;
-        padding: 0.625rem 1rem 0.625rem 0;
     }
 
     &__icon {
         padding: 0 0.375rem 0 1rem;
-        // margin-top: 4px;
-        // padding-left: 1rem;
-        // width: 20px;
-        // height: 20px;
     }
 
     &__link {

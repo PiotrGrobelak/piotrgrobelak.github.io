@@ -1,0 +1,33 @@
+.footer {
+    background-color: $black;
+
+    &__content {
+        padding: 0 1rem;
+    }
+
+    &__title {
+        @include sectionTitle;
+        padding-top: 8.25rem;
+        margin-bottom: 0.5rem;
+        color: $white;
+        text-align: left;
+    }
+
+    &__paragraph {
+        @include paragraph;
+        margin: 0;
+        margin-bottom: 1.5rem;
+        text-align: left;
+        color: $white;
+
+    }
+
+    &__wrapper {
+        margin-bottom: 2rem;
+    }
+
+    &__email {
+        padding-bottom: 7.75rem;
+        color: $blue;
+    }
+}
