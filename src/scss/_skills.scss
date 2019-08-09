@@ -8,6 +8,12 @@
         margin-bottom: 6rem;
         position: relative;
 
+        @media (min-width: $desktop-width) {
+            font-size: 2.25rem;
+            line-height: 3rem;
+            text-align: left;
+        }
+
         &::after {
             content: "";
             position: absolute;
@@ -19,14 +25,10 @@
             background-color: $grey;
             opacity: 0.3;
         }
-
-        @media (min-width: $tablet-width) {
-            text-align: left;
-        }
     }
 
     &__content {
-        @media (min-width: $tablet-width) {
+        @media (min-width: $desktop-width) {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
         }
@@ -37,9 +39,11 @@
         margin-bottom: 0.5rem;
         position: relative;
 
-        @media (min-width: $tablet-width) {
+        @media (min-width: $desktop-width) {
             margin: 0;
             text-align: left;
+            font-size: 2rem;
+            line-height: 2.75rem;
         }
 
         &::before {
@@ -72,7 +76,7 @@
     }
 
     &__list {
-        // margin: 0 auto;
+        margin: 0;
         margin-bottom: 3.5rem;
         list-style: none;
         padding: 0;

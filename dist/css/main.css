@@ -374,6 +374,11 @@ template {
     color: #171F3F;
     margin-bottom: 6rem;
     position: relative; }
+    @media (min-width: 1200px) {
+      .skills__title {
+        font-size: 2.25rem;
+        line-height: 3rem;
+        text-align: left; } }
     .skills__title::after {
       content: "";
       position: absolute;
@@ -386,10 +391,7 @@ template {
       width: 100%;
       background-color: #CBD2D9;
       opacity: 0.3; }
-    @media (min-width: 768px) {
-      .skills__title {
-        text-align: left; } }
-  @media (min-width: 768px) {
+  @media (min-width: 1200px) {
     .skills__content {
       display: -ms-grid;
       display: grid;
@@ -404,10 +406,12 @@ template {
     color: #171F3F;
     margin-bottom: 0.5rem;
     position: relative; }
-    @media (min-width: 768px) {
+    @media (min-width: 1200px) {
       .skills__subtitle {
         margin: 0;
-        text-align: left; } }
+        text-align: left;
+        font-size: 2rem;
+        line-height: 2.75rem; } }
     .skills__subtitle::before {
       content: "";
       position: absolute;
@@ -430,6 +434,7 @@ template {
     .skills__subtitle--darkerBlue::before {
       background-color: #2251CC; }
   .skills__list {
+    margin: 0;
     margin-bottom: 3.5rem;
     list-style: none;
     padding: 0;
