@@ -311,6 +311,10 @@ template {
 .hero {
   padding: 0 1rem;
   padding-top: 4rem; }
+  @media (min-width: 768px) {
+    .hero {
+      width: 100%;
+      max-width: 781px; } }
   .hero__image {
     margin: 0;
     margin-bottom: 1rem;
@@ -354,6 +358,9 @@ template {
       height: 2px;
       width: 218px;
       background-color: #0593FB; }
+      @media (min-width: 768px) {
+        .hero__email::after {
+          width: 272px; } }
 
 .skills {
   margin-bottom: 5rem;
@@ -379,6 +386,15 @@ template {
       width: 100%;
       background-color: #CBD2D9;
       opacity: 0.3; }
+    @media (min-width: 768px) {
+      .skills__title {
+        text-align: left; } }
+  @media (min-width: 768px) {
+    .skills__content {
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr); } }
   .skills__subtitle {
     margin: 0 auto;
     font-size: 1.375rem;
@@ -388,6 +404,10 @@ template {
     color: #171F3F;
     margin-bottom: 0.5rem;
     position: relative; }
+    @media (min-width: 768px) {
+      .skills__subtitle {
+        margin: 0;
+        text-align: left; } }
     .skills__subtitle::before {
       content: "";
       position: absolute;
@@ -399,6 +419,10 @@ template {
       -webkit-transform: matrix(1, 0, 0, -1, 0, 0);
           -ms-transform: matrix(1, 0, 0, -1, 0, 0);
               transform: matrix(1, 0, 0, -1, 0, 0); }
+      @media (min-width: 768px) {
+        .skills__subtitle::before {
+          top: -5%;
+          width: 80px; } }
     .skills__subtitle--green::before {
       background-color: #06C847; }
     .skills__subtitle--purpure::before {
@@ -406,11 +430,17 @@ template {
     .skills__subtitle--darkerBlue::before {
       background-color: #2251CC; }
   .skills__list {
-    margin: 0 auto;
     margin-bottom: 3.5rem;
     list-style: none;
     padding: 0;
     margin-left: 8px; }
+    @media (min-width: 768px) {
+      .skills__list {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 1.5rem; } }
   .skills__item {
     font-size: 0.875rem;
     font-weight: 400;
@@ -566,6 +596,9 @@ html {
           box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   font-size: 16px; }
+  @media (min-width: 768px) {
+    html {
+      font-size: 20px; } }
 
 *,
 *:before,
@@ -575,13 +608,13 @@ html {
 
 body {
   background: #ffffff; }
-  @media screen and (min-width: 1200px) {
+  @media (min-width: 768px) {
     body {
       border: 1rem solid #171F3F; } }
 
 .main {
   margin: 0; }
-  @media screen and (min-width: 1200px) {
+  @media (min-width: 1200px) {
     .main {
       margin: 0 auto;
       max-width: 1440px; } }

@@ -2,6 +2,11 @@
     padding: 0 1rem;
     padding-top: 4rem;
 
+    @media (min-width: $tablet-width) {
+        width: 100%;
+        max-width: 781px;
+    }
+
 
 
     &__image {
@@ -52,6 +57,11 @@
             height: 2px;
             width: 218px;
             background-color: $blue;
+
+            @media (min-width: $tablet-width) {
+                width: 272px;
+
+            }
         }
     }
 }
