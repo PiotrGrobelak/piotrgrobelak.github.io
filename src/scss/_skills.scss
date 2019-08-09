@@ -2,6 +2,11 @@
     margin-bottom: 5rem;
     padding: 0 1rem;
 
+    @media (min-width: $desktop-width) {
+        margin: 0 auto;
+        margin-bottom: 5rem;
+        max-width: 1184px;
+    }
 
     &__title {
         @include sectionTitle;
@@ -31,6 +36,7 @@
         @media (min-width: $desktop-width) {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+            margin-bottom: 8rem;
         }
     }
 
@@ -98,10 +104,10 @@
         position: relative;
         padding-left: 0.85rem;
 
-        // @media (min-width: $tablet-width) {
-        //     margin-right: 1.5rem;
-
-        // }
+        @media (min-width: $desktop-width) {
+            font-size: 1.125rem;
+            line-height: 2.5rem;
+        }
 
         &::before {
             content: "";

@@ -2,6 +2,15 @@
     padding: 0 1rem 5rem 1rem;
     background-color: $lightGrey;
 
+
+
+    &__content {
+        @media (min-width: $desktop-width) {
+            margin: 0 auto;
+            max-width: 1184px;
+        }
+    }
+
     &__title {
         @include sectionTitle;
         padding-top: 5rem;
