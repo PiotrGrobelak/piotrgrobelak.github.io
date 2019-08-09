@@ -309,8 +309,8 @@ template {
   display: none; }
 
 .hero {
-  margin-top: 4rem;
-  padding: 0 1rem; }
+  padding: 0 1rem;
+  padding-top: 4rem; }
   .hero__image {
     margin: 0;
     margin-bottom: 1rem;
