@@ -515,7 +515,20 @@ template {
     padding-top: 8.25rem;
     margin-bottom: 0.5rem;
     color: #ffffff;
-    text-align: left; }
+    text-align: left;
+    position: relative; }
+    .footer__title::before {
+      content: "";
+      position: absolute;
+      bottom: 23%;
+      left: 0;
+      width: 40px;
+      height: 4px;
+      border-radius: 8px;
+      -webkit-transform: matrix(1, 0, 0, -1, 0, 0);
+          -ms-transform: matrix(1, 0, 0, -1, 0, 0);
+              transform: matrix(1, 0, 0, -1, 0, 0);
+      background-color: #0593FB; }
   .footer__paragraph {
     font-size: 0.875rem;
     font-weight: 300;
@@ -527,9 +540,25 @@ template {
     color: #ffffff; }
   .footer__wrapper {
     margin-bottom: 2rem; }
+  .footer__link {
+    margin-right: 1.5rem; }
   .footer__email {
+    margin: 0;
     padding-bottom: 7.75rem;
-    color: #0593FB; }
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    color: #0593FB;
+    position: relative; }
+    .footer__email::after {
+      content: "";
+      position: absolute;
+      top: 20%;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      max-width: 188px;
+      background-color: #0593FB;
+      border-radius: 41px; }
 
 html {
   -webkit-box-sizing: border-box;

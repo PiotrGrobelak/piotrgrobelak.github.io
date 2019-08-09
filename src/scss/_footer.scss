@@ -11,6 +11,19 @@
         margin-bottom: 0.5rem;
         color: $white;
         text-align: left;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 23%;
+            left: 0;
+            width: 40px;
+            height: 4px;
+            border-radius: 8px;
+            transform: matrix(1, 0, 0, -1, 0, 0);
+            background-color: $blue;
+        }
     }
 
     &__paragraph {
@@ -19,15 +32,34 @@
         margin-bottom: 1.5rem;
         text-align: left;
         color: $white;
-
     }
 
     &__wrapper {
         margin-bottom: 2rem;
     }
 
+    &__link {
+        margin-right: 1.5rem;
+    }
+
     &__email {
+        margin: 0;
         padding-bottom: 7.75rem;
+        font-size: 0.875rem;
+        line-height: 1.5rem;
         color: $blue;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 20%;
+            left: 0;
+            height: 2px;
+            width: 100%;
+            max-width: 188px;
+            background-color: $blue;
+            border-radius: 41px;
+        }
     }
 }
