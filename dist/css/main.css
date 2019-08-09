@@ -575,8 +575,15 @@ html {
 
 body {
   background: #ffffff; }
+  @media screen and (min-width: 1200px) {
+    body {
+      border: 1rem solid #171F3F; } }
 
 .main {
   margin: 0; }
+  @media screen and (min-width: 1200px) {
+    .main {
+      margin: 0 auto;
+      max-width: 1440px; } }
 
 /*# sourceMappingURL=main.css.map */

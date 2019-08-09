@@ -22,8 +22,18 @@ html {
 
 body {
   background: $white;
+
+  @media screen and (min-width: $desktop-width) {
+    border: 1rem solid $black;
+  }
 }
 
 .main {
   margin: 0;
+
+  @media screen and (min-width: $desktop-width) {
+    margin: 0 auto;
+    max-width: 1440px;
+
+  }
 }
