@@ -86,11 +86,13 @@
             bottom: -15%;
             left: 0;
             height: 2px;
-            width: 218px;
+            width: 100%;
+            max-width: 218px;
             background-color: $blue;
 
-            @media (min-width: $tablet-width) {
-                width: 272px;
+            @media (min-width: $desktop-width) {
+                width: 100%;
+                max-width: 272px;
 
             }
         }

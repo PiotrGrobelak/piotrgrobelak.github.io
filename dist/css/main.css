@@ -379,15 +379,22 @@ template {
       bottom: -15%;
       left: 0;
       height: 2px;
-      width: 218px;
+      width: 100%;
+      max-width: 218px;
       background-color: #0593FB; }
-      @media (min-width: 768px) {
+      @media (min-width: 1200px) {
         .hero__email::after {
-          width: 272px; } }
+          width: 100%;
+          max-width: 272px; } }
 
 .skills {
   margin-bottom: 5rem;
   padding: 0 1rem; }
+  @media (min-width: 768px) {
+    .skills {
+      margin: 0 auto;
+      width: 100%;
+      max-width: 781px; } }
   @media (min-width: 1200px) {
     .skills {
       margin: 0 auto;
@@ -506,6 +513,11 @@ template {
   @media (min-width: 1200px) {
     .projects {
       padding: 0 1rem 8rem 1rem; } }
+  @media (min-width: 768px) {
+    .projects__content {
+      margin: 0 auto;
+      width: 100%;
+      max-width: 781px; } }
   @media (min-width: 1200px) {
     .projects__content {
       margin: 0 auto;
@@ -542,7 +554,7 @@ template {
     margin-top: 2rem;
     padding: 0;
     list-style: none; }
-    @media (min-width: 1200px) {
+    @media (min-width: 768px) {
       .projects__cards {
         display: -ms-grid;
         display: grid;
@@ -555,7 +567,7 @@ template {
     -webkit-box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.09);
             box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.09);
     border-radius: 4px; }
-    @media (min-width: 1200px) {
+    @media (min-width: 768px) {
       .projects__card {
         margin-bottom: 0;
         -webkit-box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.09);
@@ -563,7 +575,7 @@ template {
         border-radius: 8px; } }
   .projects__wrapper {
     padding: 2rem 1.625rem 0 2rem; }
-    @media (min-width: 1200px) {
+    @media (min-width: 768px) {
       .projects__wrapper {
         padding: 3rem 3rem 0 3rem; } }
   .projects__logo {
@@ -638,6 +650,11 @@ template {
   background-color: #171F3F; }
   .footer__content {
     padding: 0 1rem; }
+    @media (min-width: 768px) {
+      .footer__content {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 781px; } }
     @media (min-width: 1200px) {
       .footer__content {
         margin: 0 auto;
