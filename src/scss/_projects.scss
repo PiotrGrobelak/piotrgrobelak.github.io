@@ -2,6 +2,10 @@
     padding: 0 1rem 5rem 1rem;
     background-color: $lightGrey;
 
+    @media (min-width: $desktop-width) {
+        padding: 0 1rem 8rem 1rem;
+    }
+
 
 
     &__content {
@@ -58,16 +62,28 @@
 
         @media (min-width: $desktop-width) {
             margin-bottom: 0;
+            box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.09);
+            border-radius: 8px;
         }
     }
 
     &__wrapper {
         padding: 2rem 1.625rem 0 2rem;
+
+        @media (min-width: $desktop-width) {
+            padding: 3rem 3rem 0 3rem;
+
+        }
     }
 
     &__logo {
         width: 40px;
         height: 40px;
+
+        @media (min-width: $desktop-width) {
+            width: 48px;
+            height: 48px;
+        }
     }
 
     &__name {
@@ -75,6 +91,12 @@
         font-size: 1rem;
         font-weight: $bold;
         line-height: 1.5rem;
+
+        @media (min-width: $desktop-width) {
+            margin: 1rem 0 0.5rem 0;
+            font-size: 1.25rem;
+            line-height: 2.25rem;
+        }
     }
 
     &__description {
@@ -82,6 +104,12 @@
         margin: 0;
         margin-bottom: 2rem;
         text-align: left;
+
+        @media (min-width: $desktop-width) {
+            margin-bottom: 3rem;
+            font-size: 1.125rem;
+            line-height: 2rem;
+        }
     }
 
     &__links {
@@ -91,10 +119,21 @@
         flex-wrap: wrap;
         justify-content: flex-end;
         align-items: center;
+
+
+        @media (min-width: $desktop-width) {
+            height: 64px;
+        }
     }
 
     &__icon {
         padding: 0 0.375rem 0 1rem;
+
+        @media (min-width: $desktop-width) {
+            padding: 0 0.5rem 0 1rem;
+            height: 24px;
+        }
+
     }
 
     &__link {
@@ -103,8 +142,19 @@
         color: $blue;
         line-height: 28px;
 
+        @media (min-width: $desktop-width) {
+            font-size: 1.125rem;
+            padding-right: 1.563rem;
+
+        }
+
         &--border {
             border-right: solid 1px $grey;
+
+            @media (min-width: $desktop-width) {
+                border-right: solid 2px $grey;
+
+            }
         }
 
     }
