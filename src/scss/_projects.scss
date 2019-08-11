@@ -83,7 +83,6 @@
         &--slideIn {
             animation: slideCards 1.5s ease-in-out;
             z-index: 0;
-            transform-style: preserve-3d;
 
         }
     }
@@ -207,15 +206,14 @@
 @keyframes slideCards {
     0% {
         opacity: 0.1;
-        transform: translateY(-100%);
+        transform: translateY(-600%);
     }
 
-    50% {
-        opacity: 0.8;
-    }
+
 
     70% {
         transform: translateY(5%);
+        opacity: 0.8;
 
     }
 
