@@ -11,6 +11,7 @@
 
 
     &__content {
+
         @media (min-width: $tablet-width) {
             margin: 0 auto;
             width: 100%;
@@ -166,6 +167,21 @@
             }
         }
 
+    }
+
+    &__button {
+        display: block;
+        margin: 2rem auto 0 auto;
+        height: 3rem;
+        width: 10rem;
+        font-size: 1.5rem;
+        font-weight: $bold;
+        line-height: 2rem;
+        color: $white;
+        background-color: $black;
+        border-radius: 8px;
+        border: 2px solid $blue;
+        box-shadow: 1px 2px 4px rgba(24, 41, 67, 0.5);
     }
 
 }

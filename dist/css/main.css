@@ -376,7 +376,7 @@ template {
     .hero__email::after {
       content: "";
       position: absolute;
-      bottom: -15%;
+      bottom: -25%;
       left: 0;
       height: 2px;
       width: 100%;
@@ -645,6 +645,20 @@ template {
       @media (min-width: 1200px) {
         .projects__link--border {
           border-right: solid 2px #CBD2D9; } }
+  .projects__button {
+    display: block;
+    margin: 2rem auto 0 auto;
+    height: 3rem;
+    width: 10rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2rem;
+    color: #ffffff;
+    background-color: #171F3F;
+    border-radius: 8px;
+    border: 2px solid #0593FB;
+    -webkit-box-shadow: 1px 2px 4px rgba(24, 41, 67, 0.5);
+            box-shadow: 1px 2px 4px rgba(24, 41, 67, 0.5); }
 
 .footer {
   background-color: #171F3F; }
