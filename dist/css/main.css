@@ -650,7 +650,7 @@ template {
     margin: 2rem auto 0 auto;
     height: 3rem;
     width: 10rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 600;
     line-height: 2rem;
     color: #ffffff;
@@ -659,6 +659,9 @@ template {
     border: 2px solid #0593FB;
     -webkit-box-shadow: 1px 2px 4px rgba(24, 41, 67, 0.5);
             box-shadow: 1px 2px 4px rgba(24, 41, 67, 0.5); }
+    @media (min-width: 1200px) {
+      .projects__button {
+        font-size: 1.5rem; } }
 
 .footer {
   background-color: #171F3F; }

@@ -174,7 +174,7 @@
         margin: 2rem auto 0 auto;
         height: 3rem;
         width: 10rem;
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-weight: $bold;
         line-height: 2rem;
         color: $white;
@@ -182,6 +182,12 @@
         border-radius: 8px;
         border: 2px solid $blue;
         box-shadow: 1px 2px 4px rgba(24, 41, 67, 0.5);
+
+        @media (min-width: $desktop-width) {
+            font-size: 1.5rem;
+
+
+        }
     }
 
 }
