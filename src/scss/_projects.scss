@@ -56,6 +56,7 @@
         padding: 0;
         list-style: none;
 
+
         @media (min-width: $tablet-width) {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -69,11 +70,21 @@
         background-color: $white;
         box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.09);
         border-radius: 4px;
+        z-index: 15;
+
+
 
         @media (min-width: $tablet-width) {
             margin-bottom: 0;
             box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.09);
             border-radius: 8px;
+        }
+
+        &--slideIn {
+            animation: slideCards 1.5s ease-in-out;
+            z-index: 0;
+            transform-style: preserve-3d;
+
         }
     }
 
@@ -190,4 +201,26 @@
         }
     }
 
+}
+
+
+@keyframes slideCards {
+    0% {
+        opacity: 0.1;
+        transform: translateY(-100%);
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+
+    70% {
+        transform: translateY(5%);
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
