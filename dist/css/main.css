@@ -671,8 +671,8 @@ template {
 @-webkit-keyframes slideCards {
   0% {
     opacity: 0.1;
-    -webkit-transform: translateY(-600%);
-            transform: translateY(-600%); }
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%); }
   70% {
     -webkit-transform: translateY(5%);
             transform: translateY(5%);
@@ -685,8 +685,8 @@ template {
 @keyframes slideCards {
   0% {
     opacity: 0.1;
-    -webkit-transform: translateY(-600%);
-            transform: translateY(-600%); }
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%); }
   70% {
     -webkit-transform: translateY(5%);
             transform: translateY(5%);

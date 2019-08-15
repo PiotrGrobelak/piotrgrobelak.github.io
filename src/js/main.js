@@ -38,6 +38,8 @@ fetch("https://api.github.com/users/piotrgrobelak/repos?sort=pushed")
         deployments_url,
         homepage
       } = repo;
+      console.log(repo);
+
       repoList.innerHTML += `<li class="projects__card">
       <div class="projects__wrapper">
         <img class="projects__logo" src="assets/img/icons/githubIcon.svg" alt="Github icon.">
