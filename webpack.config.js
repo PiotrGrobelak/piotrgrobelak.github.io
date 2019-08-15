@@ -1,6 +1,9 @@
 const path = require('path');
 const outputDir = path.resolve(__dirname, 'dist/js/');
 module.exports = {
+    node: {
+        fs: 'empty'
+    },
     devtool: 'eval-source-map',
     entry: path.resolve(__dirname, 'src/js/main.js'),
     mode: 'production',
@@ -10,6 +13,3 @@ module.exports = {
     }
 
 };
-node: {
-    fs: 'empty'
-}

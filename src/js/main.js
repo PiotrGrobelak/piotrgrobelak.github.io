@@ -62,21 +62,22 @@ fetch("https://api.github.com/users/piotrgrobelak/repos?sort=pushed")
       </div>
     </li>`;
     }
+    moreRepo.addEventListener("click", () => {
 
-    for (const repo of repos.slice(4)) {
-      let {
-        name,
-        description,
-        html_url,
-        updated_at,
-        deployments_url,
-        homepage
-      } = repo;
+      for (const repo of repos.slice(4)) {
+        let {
+          name,
+          description,
+          html_url,
+          updated_at,
+          deployments_url,
+          homepage
+        } = repo;
 
-      const moreRepoList = document.createElement("li");
-      moreRepoList.classList.add("projects__card", "projects__card--slideIn");
-      repoList.appendChild(moreRepoList);
-      moreRepo.addEventListener("click", () => {
+        const moreRepoList = document.createElement("li");
+        moreRepoList.classList.add("projects__card", "projects__card--slideIn");
+
+        repoList.appendChild(moreRepoList);
 
         moreRepoList.innerHTML += `
       <div class="projects__wrapper">
@@ -94,24 +95,26 @@ fetch("https://api.github.com/users/piotrgrobelak/repos?sort=pushed")
         <img class="projects__icon" src="assets/img/icons/codeIcon.svg" alt="Link for code.">
         <a class="projects__link" href="${html_url}">Github</a>
       </div>`;
-      });
 
-      let click = 0;
-      lessRepo.addEventListener("click", () => {
-        moreRepoList.classList.add("projects__card--slideOut");
-        moreRepoList.classList.remove("projects__card--slideIn");
-        moreRepo.style.display = "block";
-        lessRepo.style.display = "none";
-        click = click + 1;
-        if (click > 1) {
-          repoList.remove(moreRepoList);
+        let click = 0;
+        lessRepo.addEventListener("click", () => {
+          moreRepoList.classList.add("projects__card--slideOut");
+          moreRepoList.classList.remove("projects__card--slideIn");
+          moreRepo.style.display = "block";
+          lessRepo.style.display = "none";
+          click = click + 1;
+          if (click > 1) {
+            repoList.removeChild(moreRepoList);
+          }
+        });
+
+        if (moreRepo) {
+          moreRepo.style.display = "none";
+          lessRepo.style.display = "block";
         }
-      });
 
-      if (moreRepo) {
-        moreRepo.style.display = "none";
-        lessRepo.style.display = "block";
       }
-    }
+    });
+
   })
   .catch(error => console.log("error:", error));
