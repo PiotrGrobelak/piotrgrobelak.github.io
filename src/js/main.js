@@ -1,6 +1,7 @@
 "use strict";
 
 import { get } from "http";
+import { link } from "fs";
 
 // service worker registration - remove if you're not going to use it
 
@@ -38,8 +39,7 @@ fetch("https://api.github.com/users/piotrgrobelak/repos?sort=pushed")
         deployments_url,
         homepage
       } = repo;
-      console.log(repo);
-
+      // console.log(repo);
       repoList.innerHTML += `<li class="projects__card">
       <div class="projects__wrapper">
         <img class="projects__logo" src="assets/img/icons/githubIcon.svg" alt="Github icon.">
@@ -58,6 +58,7 @@ fetch("https://api.github.com/users/piotrgrobelak/repos?sort=pushed")
       </div>
     </li>`;
     }
+
     moreRepo.addEventListener("click", () => {
       for (const repo of repos.slice(4)) {
         let {
@@ -68,6 +69,7 @@ fetch("https://api.github.com/users/piotrgrobelak/repos?sort=pushed")
           deployments_url,
           homepage
         } = repo;
+
         const moreRepoList = document.createElement("li");
         moreRepoList.classList.add("projects__card", "projects__card--slideIn");
         repoList.appendChild(moreRepoList);
@@ -87,16 +89,22 @@ fetch("https://api.github.com/users/piotrgrobelak/repos?sort=pushed")
         <img class="projects__icon" src="assets/img/icons/codeIcon.svg" alt="Link for code.">
         <a class="projects__link" href="${html_url}">Github</a>
       </div>`;
-
+        let click = 0;
         lessRepo.addEventListener("click", () => {
-          repoList.removeChild(moreRepoList);
+          moreRepoList.classList.add("projects__card--slideOut");
+          moreRepoList.classList.remove("projects__card--slideIn");
           moreRepo.style.display = "block";
           lessRepo.style.display = "none";
+          click = click + 1;
+          if (click > 1) {
+            repoList.remove(moreRepoList);
+          }
         });
-      }
-      if (moreRepo) {
-        moreRepo.style.display = "none";
-        lessRepo.style.display = "block";
+
+        if (moreRepo) {
+          moreRepo.style.display = "none";
+          lessRepo.style.display = "block";
+        }
       }
     });
   })
