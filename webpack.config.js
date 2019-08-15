@@ -8,4 +8,8 @@ module.exports = {
         path: outputDir,
         filename: 'main.js'
     }
+
 };
+node: {
+    fs: 'empty'
+}
