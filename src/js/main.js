@@ -1,11 +1,9 @@
 "use strict";
 
-import {
-  get
-} from "http";
-import {
-  link
-} from "fs";
+import { get } from "http";
+import { link } from "fs";
+import { compileFunction } from "vm";
+// import { TIMEOUT } from "dns";
 
 // service worker registration - remove if you're not going to use it
 
@@ -62,8 +60,8 @@ fetch("https://api.github.com/users/piotrgrobelak/repos?sort=pushed")
       </div>
     </li>`;
     }
+    // Rest repos by click button
     moreRepo.addEventListener("click", () => {
-
       for (const repo of repos.slice(4)) {
         let {
           name,
@@ -73,12 +71,9 @@ fetch("https://api.github.com/users/piotrgrobelak/repos?sort=pushed")
           deployments_url,
           homepage
         } = repo;
-
         const moreRepoList = document.createElement("li");
         moreRepoList.classList.add("projects__card", "projects__card--slideIn");
-
         repoList.appendChild(moreRepoList);
-
         moreRepoList.innerHTML += `
       <div class="projects__wrapper">
         <img class="projects__logo" src="assets/img/icons/githubIcon.svg" alt="Github icon.">
@@ -95,7 +90,6 @@ fetch("https://api.github.com/users/piotrgrobelak/repos?sort=pushed")
         <img class="projects__icon" src="assets/img/icons/codeIcon.svg" alt="Link for code.">
         <a class="projects__link" href="${html_url}">Github</a>
       </div>`;
-
         let click = 0;
         lessRepo.addEventListener("click", () => {
           moreRepoList.classList.add("projects__card--slideOut");
@@ -107,14 +101,33 @@ fetch("https://api.github.com/users/piotrgrobelak/repos?sort=pushed")
             repoList.removeChild(moreRepoList);
           }
         });
-
         if (moreRepo) {
           moreRepo.style.display = "none";
           lessRepo.style.display = "block";
         }
-
       }
     });
-
   })
   .catch(error => console.log("error:", error));
+
+const skills = document.querySelector(".skills__list--js");
+
+const skillList = document.querySelectorAll(".skills__item--green-js");
+
+function animateSkills() {
+  const scrollheight = window.scrollY;
+  // console.log(scrollheight);
+  const greenSkills = document.querySelector(".skills__subtitle--green-js")
+    .clientHeight;
+  const fromTop = document.querySelector(".skills__subtitle--green-js")
+    .offsetTop;
+  if (fromTop - 400 < greenSkills + scrollheight) {
+    for (let i = 0; i < skillList.length; i++) {
+      setTimeout(function() {
+        skillList[i].classList.add("skills__item--js");
+      }, 150 * i);
+    }
+  }
+}
+
+window.addEventListener("scroll", animateSkills);

@@ -501,11 +501,46 @@ template {
       height: 12px;
       width: 12px; }
     .skills__item--green::before {
+      opacity: 0;
+      -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+              transform: scale(1);
       background-image: url(../assets/img/icons/iconGreen.svg); }
     .skills__item--purpure::before {
       background-image: url(../assets/img/icons/iconPurpure.svg); }
     .skills__item--blue::before {
       background-image: url(../assets/img/icons/iconBlue.svg); }
+    .skills__item--js::before {
+      -webkit-animation: skills 1.5s ease-in-out both;
+              animation: skills 1.5s ease-in-out both; }
+
+@-webkit-keyframes skills {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  50% {
+    opacity: 0.5;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2); }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes skills {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  50% {
+    opacity: 0.5;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2); }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
 
 .projects {
   padding: 0 1rem 5rem 1rem;
