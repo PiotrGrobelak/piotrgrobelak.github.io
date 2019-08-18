@@ -124,19 +124,52 @@
             width: 12px;
         }
 
+
         &--green::before {
+            opacity: 0;
+            transform: scale(1);
             background-image: url(../assets/img/icons/iconGreen.svg);
 
         }
 
         &--purpure::before {
+            opacity: 0;
+            transform: scale(1);
             background-image: url(../assets/img/icons/iconPurpure.svg);
 
         }
 
         &--blue::before {
+            opacity: 0;
+            transform: scale(1);
             background-image: url(../assets/img/icons/iconBlue.svg);
 
         }
+
+        &--js::before {
+            animation: skills 1.5s ease-in-out both;
+        }
+
+
+
+
+    }
+}
+
+
+@keyframes skills {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(1.3);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
 }

@@ -1,6 +1,15 @@
 "use strict";
 
-import { get } from "http";
+import {
+  get
+} from "http";
+import {
+  link
+} from "fs";
+import {
+  compileFunction
+} from "vm";
+// import { TIMEOUT } from "dns";
 
 // service worker registration - remove if you're not going to use it
 
@@ -38,6 +47,7 @@ fetch("https://api.github.com/users/piotrgrobelak/repos?sort=pushed")
         deployments_url,
         homepage
       } = repo;
+      // console.log(repo);
       repoList.innerHTML += `<li class="projects__card">
       <div class="projects__wrapper">
         <img class="projects__logo" src="assets/img/icons/githubIcon.svg" alt="Github icon.">
@@ -56,6 +66,7 @@ fetch("https://api.github.com/users/piotrgrobelak/repos?sort=pushed")
       </div>
     </li>`;
     }
+    // Rest repos by click button
     moreRepo.addEventListener("click", () => {
       for (const repo of repos.slice(4)) {
         let {
@@ -85,17 +96,90 @@ fetch("https://api.github.com/users/piotrgrobelak/repos?sort=pushed")
         <img class="projects__icon" src="assets/img/icons/codeIcon.svg" alt="Link for code.">
         <a class="projects__link" href="${html_url}">Github</a>
       </div>`;
-
+        let click = 0;
         lessRepo.addEventListener("click", () => {
-          repoList.removeChild(moreRepoList);
+          moreRepoList.classList.add("projects__card--slideOut");
+          moreRepoList.classList.remove("projects__card--slideIn");
           moreRepo.style.display = "block";
           lessRepo.style.display = "none";
+          click = click + 1;
+          if (click > 1) {
+            repoList.removeChild(moreRepoList);
+          }
         });
-      }
-      if (moreRepo) {
-        moreRepo.style.display = "none";
-        lessRepo.style.display = "block";
+        if (moreRepo) {
+          moreRepo.style.display = "none";
+          lessRepo.style.display = "block";
+        }
       }
     });
   })
   .catch(error => console.log("error:", error));
+
+
+
+
+function animateSkills() {
+  const scrollheight = window.scrollY;
+
+  // Animate working knowledge
+  const greenSkillList = document.querySelectorAll(".skills__item--green-js");
+  const greenHeight = document.querySelector(".skills__list--green-js").clientHeight;
+  const greenHeightfromTop = document.querySelector(".skills__list--green-js").offsetTop;
+  if (greenHeightfromTop / 2 < greenHeight + scrollheight) {
+    for (let i = 0; i < greenSkillList.length; i++) {
+      setTimeout(function () {
+        greenSkillList[i].classList.add("skills__item--js");
+
+      }, 200 * i);
+      if (scrollheight > greenHeight + greenHeightfromTop) {
+        greenSkillList[i].classList.remove("skills__item--js");
+
+      }
+
+    }
+  }
+
+  // Animate know smoething about
+  const purpureSkillList = document.querySelectorAll(".skills__item--purpure-js");
+  const purpureHeight = document.querySelector(".skills__list--purpure-js").clientHeight;
+  const purpureHeightFromTop = document.querySelector(".skills__list--purpure-js").offsetTop;
+  if (purpureHeightFromTop - 2 * purpureHeight < purpureHeight + scrollheight) {
+    for (let i = 0; i < purpureSkillList.length; i++) {
+      setTimeout(function () {
+        purpureSkillList[i].classList.add("skills__item--js");
+
+      }, 200 * i);
+      if (scrollheight > purpureHeight + purpureHeightFromTop) {
+        purpureSkillList[i].classList.remove("skills__item--js");
+
+      }
+    }
+  }
+
+  // Animate want to learn 
+  const blueSkillList = document.querySelectorAll(".skills__item--blue-js");
+  const blueHeight = document.querySelector(".skills__list--blue-js").clientHeight;
+  const blueHeightFromTop = document.querySelector(".skills__list--blue-js").offsetTop;
+
+  if (blueHeightFromTop < blueHeight + scrollheight) {
+    for (let i = 0; i < blueSkillList.length; i++) {
+      setTimeout(function () {
+        blueSkillList[i].classList.add("skills__item--js");
+
+      }, 200 * i);
+      if (scrollheight > blueHeight + blueHeightFromTop) {
+        blueSkillList[i].classList.remove("skills__item--js");
+
+      }
+    }
+  }
+
+
+
+
+
+
+}
+
+window.addEventListener("scroll", animateSkills);
