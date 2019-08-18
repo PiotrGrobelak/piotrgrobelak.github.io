@@ -1,8 +1,14 @@
 "use strict";
 
-import { get } from "http";
-import { link } from "fs";
-import { compileFunction } from "vm";
+import {
+  get
+} from "http";
+import {
+  link
+} from "fs";
+import {
+  compileFunction
+} from "vm";
 // import { TIMEOUT } from "dns";
 
 // service worker registration - remove if you're not going to use it
@@ -110,24 +116,70 @@ fetch("https://api.github.com/users/piotrgrobelak/repos?sort=pushed")
   })
   .catch(error => console.log("error:", error));
 
-const skills = document.querySelector(".skills__list--js");
 
-const skillList = document.querySelectorAll(".skills__item--green-js");
+
 
 function animateSkills() {
   const scrollheight = window.scrollY;
-  // console.log(scrollheight);
-  const greenSkills = document.querySelector(".skills__subtitle--green-js")
-    .clientHeight;
-  const fromTop = document.querySelector(".skills__subtitle--green-js")
-    .offsetTop;
-  if (fromTop - 400 < greenSkills + scrollheight) {
-    for (let i = 0; i < skillList.length; i++) {
-      setTimeout(function() {
-        skillList[i].classList.add("skills__item--js");
-      }, 150 * i);
+
+  // Animate working knowledge
+  const greenSkillList = document.querySelectorAll(".skills__item--green-js");
+  const greenHeight = document.querySelector(".skills__list--green-js").clientHeight;
+  const greenHeightfromTop = document.querySelector(".skills__list--green-js").offsetTop;
+  if (greenHeightfromTop / 2 < greenHeight + scrollheight) {
+    for (let i = 0; i < greenSkillList.length; i++) {
+      setTimeout(function () {
+        greenSkillList[i].classList.add("skills__item--js");
+
+      }, 200 * i);
+      if (scrollheight > greenHeight + greenHeightfromTop) {
+        greenSkillList[i].classList.remove("skills__item--js");
+
+      }
+
     }
   }
+
+  // Animate know smoething about
+  const purpureSkillList = document.querySelectorAll(".skills__item--purpure-js");
+  const purpureHeight = document.querySelector(".skills__list--purpure-js").clientHeight;
+  const purpureHeightFromTop = document.querySelector(".skills__list--purpure-js").offsetTop;
+  if (purpureHeightFromTop - 2 * purpureHeight < purpureHeight + scrollheight) {
+    for (let i = 0; i < purpureSkillList.length; i++) {
+      setTimeout(function () {
+        purpureSkillList[i].classList.add("skills__item--js");
+
+      }, 200 * i);
+      if (scrollheight > purpureHeight + purpureHeightFromTop) {
+        purpureSkillList[i].classList.remove("skills__item--js");
+
+      }
+    }
+  }
+
+  // Animate want to learn 
+  const blueSkillList = document.querySelectorAll(".skills__item--blue-js");
+  const blueHeight = document.querySelector(".skills__list--blue-js").clientHeight;
+  const blueHeightFromTop = document.querySelector(".skills__list--blue-js").offsetTop;
+
+  if (blueHeightFromTop < blueHeight + scrollheight) {
+    for (let i = 0; i < blueSkillList.length; i++) {
+      setTimeout(function () {
+        blueSkillList[i].classList.add("skills__item--js");
+
+      }, 200 * i);
+      if (scrollheight > blueHeight + blueHeightFromTop) {
+        blueSkillList[i].classList.remove("skills__item--js");
+
+      }
+    }
+  }
+
+
+
+
+
+
 }
 
 window.addEventListener("scroll", animateSkills);
