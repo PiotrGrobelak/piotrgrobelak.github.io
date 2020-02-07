@@ -611,7 +611,17 @@ template {
     -webkit-box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.09);
             box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.09);
     border-radius: 4px;
-    z-index: 15; }
+    z-index: 15;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
     .projects__card--slideOut {
       position: absolute;
       -webkit-transform: translateY(-300%);
