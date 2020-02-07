@@ -36,7 +36,7 @@
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "through2": "^3.0.1",
     "vinyl-named": "^1.1.0",
     "webpack": "^4.35.3",
@@ -48,5 +48,7 @@
       "@babel/preset-env"
     ]
   },
-  "dependencies": {}
+  "dependencies": {
+    "serialize-javascript": ">=2.1.1"
+  }
 }
