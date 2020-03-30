@@ -1,16 +1,16 @@
-# Simple Portfolio Project 
-*** 
+# Personal Portfolio
+***
 ![page sreenshot](https://piotrgrobelak.github.io/piotrgrobelak.github.io/assets/img/cover.png)
 ***
 # About the project
-Website about my person
-
+Website about my person created as the final project of WTF - Co ten frontend course.
 On page you can find about my skills and projects.
+Website created based on a template created in Figma.
 
 ***
-Link to the project ---> [Click](https://piotrgrobelak.github.io/)
+Link to the final [project](https://piotrgrobelak.github.io/)
 ***
-# Project created with: 
+# Project created with:
 1. :fire: Semantic HTML5.
 
 2. :fire: Block Element Modifier.
@@ -32,7 +32,10 @@ Link to the project ---> [Click](https://piotrgrobelak.github.io/)
 
 3. :muscle: Gulp.
 
-4. :muscle: Autokey.
+4. :muscle: Figma.
+
+5. :muscle: Autokey.
+
 ***
 # Configuration for localhost:
 

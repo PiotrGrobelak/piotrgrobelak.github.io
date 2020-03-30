@@ -1,33 +1,21 @@
 "use strict";
 
-import {
-  get
-} from "http";
-import {
-  link
-} from "fs";
-import {
-  compileFunction
-} from "vm";
-// import { TIMEOUT } from "dns";
 
-// service worker registration - remove if you're not going to use it
 
-// if ('serviceWorker' in navigator) {
-//   window.addEventListener('load', function() {
-//     navigator.serviceWorker.register('serviceworker.js').then(function(registration) {
-//       // Registration was successful
-//       console.log('ServiceWorker registration successful with scope: ', registration.scope);
-//     }, function(err) {
-//       // registration failed :(
-//       console.log('ServiceWorker registration failed: ', err);
-//     });
-//   });
-// }
 
-// place your code below
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('serviceworker.js').then(function (registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function (err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
 
-console.log(`Hello world!`);
+
 
 const repoList = document.querySelector(".projects__cards--js");
 const moreRepo = document.querySelector(".projects__button--more-js");
@@ -47,19 +35,18 @@ fetch("https://api.github.com/users/piotrgrobelak/repos?sort=pushed")
         deployments_url,
         homepage
       } = repo;
-      // console.log(repo);
       repoList.innerHTML += `<li class="projects__card">
       <div class="projects__wrapper">
         <img class="projects__logo" src="assets/img/icons/githubIcon.svg" alt="Github icon.">
         <h4 class="projects__name">${name}</h4>
         <p class="projects__description">${
-          description ? description : (description = "No description")
+        description ? description : (description = "No description")
         }</p>
       </div>
       <div class="projects__links">
         <img class="projects__icon" src="assets/img/icons/demoIcon.svg" alt="Link for live project.">
         <a class="projects__link projects__link--border" href="${
-          homepage ? homepage : (homepage = "")
+        homepage ? homepage : (homepage = "")
         }">Demo</a>
         <img class="projects__icon" src="assets/img/icons/codeIcon.svg" alt="Link for code.">
         <a class="projects__link" href="${html_url}">Github</a>
@@ -86,13 +73,13 @@ fetch("https://api.github.com/users/piotrgrobelak/repos?sort=pushed")
         <h4 class="projects__name">${name}</h4>
         <p class="projects__description">${
           description ? description : (description = "No description")
-        }</p>
+          }</p>
       </div>
       <div class="projects__links">
         <img class="projects__icon" src="assets/img/icons/demoIcon.svg" alt="Link for live project.">
         <a class="projects__link projects__link--border" href="${
           homepage ? homepage : (homepage = "")
-        }">Demo</a>
+          }">Demo</a>
         <img class="projects__icon" src="assets/img/icons/codeIcon.svg" alt="Link for code.">
         <a class="projects__link" href="${html_url}">Github</a>
       </div>`;
@@ -157,7 +144,7 @@ function animateSkills() {
     }
   }
 
-  // Animate want to learn 
+  // Animate want to learn
   const blueSkillList = document.querySelectorAll(".skills__item--blue-js");
   const blueHeight = document.querySelector(".skills__list--blue-js").clientHeight;
   const blueHeightFromTop = document.querySelector(".skills__list--blue-js").offsetTop;
