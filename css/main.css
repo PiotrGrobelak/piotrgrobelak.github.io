@@ -309,12 +309,10 @@ template {
   display: none; }
 
 .hero {
-  padding: 0 1rem;
-  padding-top: 4rem;
-  margin: 0 auto;
-  margin-bottom: 7.8rem; }
+  padding: 4rem 1rem 6rem; }
   @media (min-width: 768px) {
     .hero {
+      margin: 0 auto;
       width: 100%;
       max-width: 781px; } }
   @media (min-width: 1200px) {
@@ -361,15 +359,16 @@ template {
   .hero__link {
     font-weight: 500;
     color: #0593FB;
+    text-decoration: underline;
     cursor: pointer; }
   .hero__email {
     position: relative;
     margin: 0;
+    margin-bottom: 7.8rem;
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.6rem;
-    color: #0593FB;
-    text-decoration: none; }
+    color: #0593FB; }
     @media (min-width: 1200px) {
       .hero__email {
         font-size: 1.25rem;
@@ -645,7 +644,8 @@ template {
     padding: 2rem 1.625rem 0 2rem; }
     @media (min-width: 768px) {
       .projects__wrapper {
-        padding: 3rem 3rem 0 3rem; } }
+        padding: 3rem 3rem 0 3rem;
+        min-height: 220px; } }
   .projects__logo {
     width: 40px;
     height: 40px; }
@@ -875,11 +875,11 @@ template {
     margin-right: 1.5rem; }
   .footer__email {
     margin: 0;
+    padding-bottom: 6.5rem;
     font-size: 0.875rem;
     line-height: 1.5rem;
     color: #0593FB;
-    position: relative;
-    text-decoration: none; }
+    position: relative; }
     @media (min-width: 1200px) {
       .footer__email {
         padding-bottom: 7.125rem;
@@ -887,7 +887,7 @@ template {
     .footer__email::after {
       content: "";
       position: absolute;
-      bottom: -25%;
+      top: 20%;
       left: 0;
       height: 2px;
       width: 100%;
@@ -917,6 +917,9 @@ body {
   @media (min-width: 768px) {
     body {
       border: 1rem solid #171F3F; } }
+
+a {
+  text-decoration: none; }
 
 .main {
   margin: 0;
