@@ -645,7 +645,7 @@ template {
     @media (min-width: 768px) {
       .projects__wrapper {
         padding: 3rem 3rem 0 3rem;
-        min-height: 220px; } }
+        min-height: 300px; } }
   .projects__logo {
     width: 40px;
     height: 40px; }
